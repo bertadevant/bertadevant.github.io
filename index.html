@@ -59,6 +59,50 @@
             padding-bottom: 10px;
         }
         
+        .action-box {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .action-title {
+            color: #d32f2f;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .recipient-box {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #d32f2f;
+        }
+        
+        .action-button {
+            display: inline-block;
+            background-color: #d32f2f;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px auto;
+            width: 80%;
+        }
+        
+        .action-note {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 margin: 15px;
@@ -68,6 +112,10 @@
             .image-caption {
                 font-size: 14px;
                 padding: 10px;
+            }
+            
+            .action-button {
+                width: 100%;
             }
         }
     </style>
@@ -86,41 +134,37 @@
         </div>
         
         <div class="content">
-            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #f8f9fa; padding: 20px; border-radius: 10px; border: 1px solid #ddd;">
-              <h2 style="color: #d32f2f; text-align: center; margin-bottom: 20px;">✉️ ¡ACTÚA AHORA!</h2>
-              
-              <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                Haz clic en el enlace y exige la liberación de Sergio Toribio:
-              </p>
-              
-              <div style="background-color: #fff; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #d32f2f;">
-                <p style="margin: 5px 0;"><strong>Destinatario principal:</strong></p>
-                <p style="margin: 5px 0; color: #1a73e8;">
-                  <a href="mailto:consular@maec.es" style="color: #1a73e8; text-decoration: none;">consular@maec.es</a>
-                </p>
+            <div class="action-box">
+                <h2 class="action-title">✉️ ¡ACTÚA AHORA!</h2>
                 
-                <p style="margin: 15px 0 5px 0;"><strong>Con copia a:</strong></p>
-                <ul style="margin-top: 5px; padding-left: 20px;">
-                  <li style="margin-bottom: 5px;">
-                    <a href="mailto:presidencia@presidencia.gob.es" style="color: #1a73e8; text-decoration: none;">presidencia@presidencia.gob.es</a>
-                  </li>
-                  <li>
-                    <a href="mailto:informacion@exteriores.gob.es" style="color: #1a73e8; text-decoration: none;">informacion@exteriores.gob.es</a>
-                  </li>
-                </ul>
-              </div>
-              <a href="mailto:consular@maec.es?cc=presidencia@presidencia.gob.es,informacion@exteriores.gob.es&subject=¡Urgente! Secuestro ilegal de Sergio Toribio (ciudadano español) por Israel - Exigimos acción inmediata&body=Estimadas autoridades españolas,%0A%0AExijo como ciudadano/a y en virtud del derecho internacional:%0A%0A1. Condena inmediata al secuestro ilegal de SERGIO TORIBIO (DNI español), realizado por fuerzas israelíes el 9 de junio de 2024 durante el ataque a la Flotilla Freedom en aguas internacionales.%0A%0A2. Gestión consular urgente para:%0A   - Verificar su estado de salud y condiciones de detención.%0A   - Garantizar acceso a abogado y asistencia médica.%0A%0A3. Presión diplomática para su liberación inmediata.%0A%0ADatos del afectado:%0A- Nombre completo: Sergio Toribio%0A- Fecha secuestro: 9 de junio de 2024%0A- Contexto: Misión humanitaria (Flotilla Freedom)%0A- Nacionalidad: Española%0A%0AMis datos para seguimiento (opcional):%0A- Nombre: [Tu nombre completo]%0A- DNI/NIE: [Tu número]%0A- Teléfono: [Tu contacto]%0A- Email: [Tu correo]%0A%0AAtentamente,%0A[Tu nombre]"
-                 style="display: inline-block; background-color: #d32f2f; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; text-align: center; margin: 10px auto; width: 80%;">
-                ENVIAR CORREO DE PROTESTA
-              </a>
-              
-              <p style="font-size: 14px; color: #666; text-align: center; margin-top: 20px;">
-                El correo se abrirá en tu cliente de email con todos los datos preconfigurados.
-              </p>
+                <p>Haz clic en el enlace y exige la liberación de Sergio Toribio:</p>
+                
+                <div class="recipient-box">
+                    <p><strong>Destinatario principal:</strong></p>
+                    <p>
+                        <a href="mailto:consular@maec.es">consular@maec.es</a>
+                    </p>
+                    
+                    <p><strong>Con copia a:</strong></p>
+                    <ul>
+                        <li>
+                            <a href="mailto:presidencia@presidencia.gob.es">presidencia@presidencia.gob.es</a>
+                        </li>
+                        <li>
+                            <a href="mailto:informacion@exteriores.gob.es">informacion@exteriores.gob.es</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <a href="mailto:consular@maec.es?cc=presidencia@presidencia.gob.es,informacion@exteriores.gob.es,secretaria@mpr.gob.es&subject=¡Urgente!%20Secuestro%20ilegal%20de%20Sergio%20Toribio%20(ciudadano%20espa%C3%B1ol)%20por%20Israel%20-%20Exigimos%20acci%C3%B3n%20inmediata&body=Estimadas%20autoridades%20espa%C3%B1olas,%0A%0AExijo%20como%20ciudadano/a%20y%20en%20virtud%20del%20derecho%20internacional:%0A%0A1.%20Condena%20inmediata%20al%20secuestro%20ilegal%20de%20SERGIO%20TORIBIO%20(DNI%20espa%C3%B1ol),%20realizado%20por%20fuerzas%20israel%C3%ADes%20el%209%20de%20junio%20de%202024%20durante%20el%20ataque%20a%20la%20Flotilla%20Freedom%20en%20aguas%20internacionales.%0A%0A2.%20Gesti%C3%B3n%20consular%20urgente%20para:%0A%20%20%20-%20Verificar%20su%20estado%20de%20salud%20y%20condiciones%20de%20detenci%C3%B3n.%0A%20%20%20-%20Garantizar%20acceso%20a%20abogado%20y%20asistencia%20m%C3%A9dica.%0A%0A3.%20Presi%C3%B3n%20diplom%C3%A1tica%20para%20su%20liberaci%C3%B3n%20inmediata.%0A%0ADatos%20del%20afectado:%0A-%20Nombre%20completo:%20Sergio%20Toribio%0A-%20Fecha%20secuestro:%209%20de%20junio%20de%202024%0A-%20Contexto:%20Misi%C3%B3n%20humanitaria%20(Flotilla%20Freedom)%0A-%20Nacionalidad:%20Espa%C3%B1ola%0A%0AMis%20datos%20para%20seguimiento%20(opcional):%0A-%20Nombre:%20[Tu%20nombre%20completo]%0A-%20DNI/NIE:%20[Tu%20n%C3%BAmero]%0A-%20Tel%C3%A9fono:%20[Tu%20contacto]%0A-%20Email:%20[Tu%20correo]%0A%0AAtentamente,%0A[Tu%20nombre]"
+                   class="action-button">
+                    ENVIAR CORREO DE PROTESTA
+                </a>
+                
+                <p class="action-note">
+                    El correo se abrirá en tu cliente de email con todos los datos preconfigurados.
+                </p>
             </div>
-
-            <a href="mailto:consular@maec.es ?cc=presidencia@presidencia.gob.es, informacion@exteriores.gob.es, secretaria@mpr.gob.es&subject=%C2%A1Urgente!%20Secuestro%20ilegal%20de%20Sergio%20Toribio%20(ciudadano%20espa%C3%B1ol)%20por%20Israel%20-%20Exigimos%20acci%C3%B3n%20inmediata&body=Estimadas%20autoridades%20espa%C3%B1olas%2C%0A%0AExijo%20como%20ciudadano%2Fa%20y%20en%20virtud%20del%20derecho%20internacional%3A%0A%0A1.%20**Condena%20inmediata**%20al%20secuestro%20ilegal%20de%20SERGIO%20TORIBIO%20(DNI%20espa%C3%B1ol)%2C%20realizado%20por%20fuerzas%20israel%C3%ADes%20el%209%20de%20junio%20de%202024%20durante%20el%20ataque%20a%20la%20Flotilla%20Freedom%20en%20aguas%20internacionales.%0A%0A2.%20**Gesti%C3%B3n%20consular%20urgente**%20para%3A%0A%20%20%20-%20Verificar%20su%20estado%20de%20salud%20y%20condiciones%20de%20detenci%C3%B3n.%0A%20%20%20-%20Garantizar%20acceso%20a%20abogado%20y%20asistencia%20m%C3%A9dica.%0A%0A3.%20**Presi%C3%B3n%20diplom%C3%A1tica**%20para%20su%20liberaci%C3%B3n%20inmediata%2C%20recordando%20que%20Espa%C3%B1a%20tiene%20la%20obligaci%C3%B3n%20constitucional%20(Art.%2023)%20de%20proteger%20a%20sus%20ciudadanos%20en%20el%20exterior.%0A%0ADatos%20del%20afectado%3A%0A-%20Nombre%20completo%3A%20Sergio%20Toribio%0A-%20Fecha%20secuestro%3A%209%20de%20junio%20de%202024%0A-%20Contexto%3A%20Misi%C3%B3n%20humanitaria%20(Flotilla%20Freedom)%0A-%20Nacionalidad%3A%20Espa%C3%B1ola%0A%0AMis%20datos%20para%20seguimiento%3A%0A-%20Nombre%3A%20%5BTu%20nombre%20completo%5D%0A-%20DNI%2FNIE%3A%20%5BTu%20n%C3%BAmero%5D%0A%0ANo%20permitamos%20que%20un%20aliado%20viole%20impunemente%20los%20derechos%20de%20espa%C3%B1oles.%20El%20silencio%20ser%C3%ADa%20complicidad.%0A%0AAtentamente%2C%0A%5BTu%20nombre%5D">bit.ly/RescateSergioToribio</a>
-
         </div>
     </div>
 </body>
