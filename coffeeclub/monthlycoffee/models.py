@@ -10,6 +10,7 @@ class Tag(models.Model):
 class CoffeeRoaster(models.Model):
     name = models.CharField(max_length=100)
     website = models.URLField()
+    image = models.ImageField(upload_to="roasters_assets", null = True)
     rating = models.IntegerField(default=0)
     tags = models.ManyToManyField(Tag)
     def __str__(self):
