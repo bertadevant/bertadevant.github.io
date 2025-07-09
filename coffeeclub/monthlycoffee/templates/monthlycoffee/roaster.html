@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Monthly Coffee</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'monthlycoffee/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'monthlycoffee/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+                {% if roaster %}
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>{{ roaster.name }}</h1>
+                            <!-- Add this as a link to check the ratings -->
+                            <p>{{ roaster.rating }} / 5 </p>
+                            <blockquote><i>{{ roaster.last_feedback }}.</i></blockquote>
+							<ul class="actions fit">
+                                <li><a href="{{ roaster.website }}" class="button primary fit" target="_blank" rel="noopener noreferrer">Buy Coffee!</a></li>
+							</ul>
+						</div>
+						<div class="image fit">
+							<img src="{{ roaster.image_ref }}" alt="" />
+						</div>
+					</section>
+                {% else %}
+                <ul class="actions stacked">
+                    <p>
+                        404 ERROR
+                    </p>
+                </ul>
+                {% endif %}
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<p>&copy; Made by Berta Devant. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						</div>
+					</footer>
+
+			</div>
+		<!-- Scripts -->
+			<script src="{% static 'monthlycoffee/js/jquery.min.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/browser.min.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/util.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/main.js' %}"></script>
+	</body>
+</html>

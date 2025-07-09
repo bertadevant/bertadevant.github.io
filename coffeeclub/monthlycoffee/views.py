@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.templatetags.static import static
 from . import get_roasters_data
 from . import set_roaster_data
@@ -15,10 +15,21 @@ def index(request):
     }
     return render(request, template, context)
 
-def results(request):
-    roaster = get_roasters_data.get_next_roaster()
-    template = 'monthlycoffee/results.html'
-    context = { "roaster_of_the_month": roaster }
+def submit_action(request, last_month_id):
+    if request.method == 'POST':
+        action_name = request.POST.get('id')
+        if action_name == "rate":
+            return redirect('rate', last_month_id)
+        else:
+            next_roaster = get_roasters_data.get_next_roaster()
+            set_roaster_data.transfer_last_time_tag(next_roaster.id, last_month_id)
+            return redirect('roaster', next_roaster.id)
+    return redirect('index')
+
+def roaster(request, roaster_id):
+    roaster = get_roasters_data.get_roaster(roaster_id)
+    template = 'monthlycoffee/roaster.html'
+    context = {"roaster": roaster}
     return render(request, template, context)
 
 def rate(request, roaster_id):

@@ -1,7 +1,7 @@
 from django.templatetags.static import static
 from django.db import models
 from .tag import Tag
-from django.db.models import Avg
+from django.db.models import Avg, Sum
 
 class CoffeeRoaster(models.Model):
     name = models.CharField(max_length=100)
@@ -25,7 +25,8 @@ class CoffeeRoaster(models.Model):
     """Weight is how much a roaster will be chosen by random, higher is better goes up to 5"""
     def weight(self):
         all_tags = self.tags.all()
-        return all_tags.aggregate('value')
+        result = all_tags.aggregate(total_value=Sum('value'))
+        return float(result.get('total_value', 0))
 
     def last_feedback(self):
         last_rating = self.ratings.order_by('-created_at').first()
