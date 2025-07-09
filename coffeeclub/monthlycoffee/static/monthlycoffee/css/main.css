@@ -2664,8 +2664,18 @@ input, select, textarea {
 			display: block;
 			margin: 0 0 2rem 0;
 			width: 100%;
+			object-fit: cover;
+			object-position: center;
 		}
 
+		.image.fit.right.small {
+			width: 35%;
+			object-fit: cover;
+			object-position: center;
+			max-width: 8rem;
+			height: auto;
+    		min-height: 200px;
+		}
 			.image.fit img {
 				width: 100%;
 			}
@@ -3472,7 +3482,7 @@ input, select, textarea {
 			-webkit-flex-shrink: 1;
 			-ms-flex-shrink: 1;
 			flex-shrink: 1;
-			width: 50%;
+			width: 65%;
 			max-width: 48rem;
 			margin: 0 auto;
 		}
@@ -3487,7 +3497,7 @@ input, select, textarea {
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
 			border-radius: 0;
-			width: 50%;
+			width: 35%;
 		}
 
 			.banner.style1 .image img {
@@ -3636,7 +3646,7 @@ input, select, textarea {
 			-moz-object-position: right;
 			-webkit-object-position: right;
 			-ms-object-position: right;
-			object-position: right;
+			object-position: center;
 		}
 
 /* Banner (style2) */
