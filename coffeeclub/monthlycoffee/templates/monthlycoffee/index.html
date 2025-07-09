@@ -17,7 +17,7 @@
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
-                {% if last_month_roaster %}
+                {% if last_month_roaster and banner_url %}
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h1>Last Month Coffee</h1>
@@ -34,7 +34,7 @@
 							</ul>
 						</div>
 						<div class="image fit">
-							<img src="{% static 'monthlycoffee/images/espresso.jpg' %}" alt="" />
+							<img src="{{ banner_url }}" alt="" />
 						</div>
 					</section>
                 {% else %}
