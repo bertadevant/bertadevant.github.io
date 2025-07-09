@@ -8,6 +8,13 @@
                     <!-- Add this as a link to check the ratings -->
                     <p>{{ roaster.rating }} / 5 </p>
                     <blockquote><i>{{ roaster.last_feedback }}.</i></blockquote>
+                    <!-- Tags -->
+                    <!-- Add a proper look upo by tags later -->
+                    <ul class="actions small">
+                        {% for tag in roaster.tags.all %}
+                            {% include "monthlycoffee/tag.html" with tag=tag %}
+                        {% endfor %}
+                    </ul>
                     <ul class="actions fit">
                         <li><a href="{{ roaster.website }}" class="button primary fit" target="_blank" rel="noopener noreferrer">Buy Coffee!</a></li>
                     </ul>

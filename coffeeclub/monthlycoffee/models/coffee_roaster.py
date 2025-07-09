@@ -2,8 +2,6 @@ from django.templatetags.static import static
 from django.db import models
 from .tag import Tag
 from django.db.models import Avg, Sum
-from imagekit.models import ImageSpecField
-from imagekit.processors import ResizeToFill
 
 class CoffeeRoaster(models.Model):
     name = models.CharField(max_length=100)
@@ -34,12 +32,3 @@ class CoffeeRoaster(models.Model):
         last_rating = self.ratings.order_by('-created_at').first()
         if not last_rating: return 'No feedback yet'
         return last_rating.review
-
-    def small_thumbnail(self):
-        image = ImageSpecField(
-            source='image_ref',
-            processors=[ResizeToFill(150, 150)],  # Square thumbnail
-            format='JPEG',
-            options={'quality': 80}
-        )
-        return image.url

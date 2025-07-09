@@ -24,7 +24,7 @@
                 <img src="{{ banner_url }}" alt="" />
             </div>
         </section>
+        {% include 'monthlycoffee/gallery.html' with roaster=roasters %}
     {% endif %}
-    {% include 'monthlycoffee/gallery.html' with roaster=roasters %}
     </div>
 {% endblock %}
