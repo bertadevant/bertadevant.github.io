@@ -2680,6 +2680,14 @@ input, select, textarea {
 				width: 100%;
 			}
 
+		.image.square.small {
+			display: block;
+        	aspect-ratio: 1/1;
+        	overflow: hidden;
+			object-fit: cover;
+			padding-bottom: 100%; /* Creates square based on width */
+		}
+
 		.image.main {
 			display: block;
 			margin: 0 0 3rem 0;

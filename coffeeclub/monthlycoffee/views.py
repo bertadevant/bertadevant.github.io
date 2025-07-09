@@ -4,12 +4,17 @@ from . import get_roasters_data
 from . import set_roaster_data
 import random
 
+from .models import CoffeeRoaster
+
+
 def index(request):
+    roasters = CoffeeRoaster.objects.all()
     roaster = get_roasters_data.get_last_month_roaster()
     banner_num = random.randint(1, 30)
     banner_url = static(f"monthlycoffee/images/banner_images/{banner_num}.jpg")
     template = 'monthlycoffee/index.html'
     context = {
+        "roasters": roasters,
         "last_month_roaster": roaster,
         "banner_url": banner_url
     }

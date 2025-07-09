@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #Monthly coffee app
     'monthlycoffee.apps.MonthlycoffeeConfig',
+    'imagekit',
 ]
 
 MIDDLEWARE = [
